@@ -3,7 +3,7 @@
 use Httpful\Request;
 
 /**
- * Repository: https://github.com/VisualAppeal/Piwik-PHP-API
+ * Repository: https://github.com/zvse/Piwik-PHP-API
  *
  * Original Repository: https://github.com/VisualAppeal/Piwik-PHP-API
  * Official api reference: http://piwik.org/docs/analytics-api/reference/
