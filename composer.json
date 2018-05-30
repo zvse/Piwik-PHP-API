@@ -1,5 +1,5 @@
 {
-	"name": "visualappeal/piwik-php-api",
+	"name": "zvse/piwik-php-api",
 	"description": "API wrapper for piwik",
 	"license": "Apache-2.0",
 	"require": {
@@ -11,7 +11,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"VisualAppeal\\": "src/"
+			"zvse\\": "src/"
 		}
 	}
 }
