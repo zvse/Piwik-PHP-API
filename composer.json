@@ -1,7 +1,6 @@
 {
   "name": "zvse/piwik-php-api",
   "description": "API wrapper for piwik",
-  "license": "Apache-2.0",
   "require": {
     "php": ">=7",
     "voku/httpful": "0.2.*"
