@@ -397,7 +397,7 @@ class Piwik {
    *
    * @return bool|object
    */
-  private function _request($method, $params = [], $optional = []) {
+  protected function _request($method, $params = [], $optional = []) {
     $url = $this->_parseUrl($method, $params + $optional);
     if ($url === FALSE) {
       return FALSE;
@@ -429,7 +429,7 @@ class Piwik {
    *
    * @return bool|object
    */
-  private function _finishRequest($request, $method, $params) {
+  protected function _finishRequest($request, $method, $params) {
     $valid = $this->_validRequest($request);
 
     if ($valid === TRUE) {
@@ -454,7 +454,7 @@ class Piwik {
    *
    * @return string
    */
-  private function _parseUrl($method, array $params = []) {
+  protected function _parseUrl($method, array $params = []) {
     $params = [
         'module' => 'API',
         'method' => $method,
@@ -514,7 +514,7 @@ class Piwik {
    *
    * @return bool|int
    */
-  private function _validRequest($request) {
+  protected function _validRequest($request) {
     if (($request !== FALSE) and (!is_null($request))) {
       if (!isset($request->result) or ($request->result != 'error')) {
         return TRUE;
@@ -537,7 +537,7 @@ class Piwik {
    *
    * @return mixed|object
    */
-  private function _parseRequest($request) {
+  protected function _parseRequest($request) {
     switch ($this->_format) {
       case self::FORMAT_JSON:
         return json_decode($request, $this->_isJsonDecodeAssoc);
